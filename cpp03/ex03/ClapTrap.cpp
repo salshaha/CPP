@@ -20,7 +20,7 @@ ClapTrap::ClapTrap(const ClapTrap &copy)
  
 ClapTrap::ClapTrap(std::string name)
 {
-	std::cout << "Parameterized constructor called" << std::endl;
+	std::cout << "ClapTrap Parameterized constructor called" << std::endl;
     this->name = name;
     this->damage = 0;
     this->energy = 10;
@@ -60,13 +60,7 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    if (hit == 0)
-	{
-		std::cout << "ClapTrap " << this->name 
-			<< " is destroyed! " << std::endl;
-		return ;
-	}
-    else if (amount >= this->hit)
+    if (amount >= this->hit)
     {
         this->hit = 0;
         std::cout << this->name << " takes " << amount << " of damage! " << std::endl;

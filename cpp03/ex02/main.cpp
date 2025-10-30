@@ -13,7 +13,7 @@ int main()
 
     FragTrap frag("FR4G-TP");
     frag.attack("enemy");
-    frag.highFivesGuys(); // ✅ FragTrap special ability
+    frag.highFivesGuys();
 
     return 0;
 }

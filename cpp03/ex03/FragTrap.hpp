@@ -4,14 +4,18 @@
 #include <iostream>
 #include "ClapTrap.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : public virtual ClapTrap
 {
+    protected:
+        static unsigned int hit;
+        static unsigned int damage;
     public:
         FragTrap();
         FragTrap(std::string name);
         FragTrap&   operator=( const FragTrap& other );
         ~FragTrap();
         void highFivesGuys(void);
+
 };
 
 

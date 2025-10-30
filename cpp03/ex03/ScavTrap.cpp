@@ -1,5 +1,7 @@
 #include "ScavTrap.hpp"
 
+unsigned int ScavTrap::energy = 50;
+
 ScavTrap::ScavTrap()
 {
     std::cout << "ScavTrap defult constructed!" << std::endl;
@@ -34,12 +36,6 @@ ScavTrap::~ScavTrap()
 
 void ScavTrap::guardGate()
 {
-    if (hit == 0)
-    {
-        std::cout << "\033[1;31mClapTrap " << this->name 
-			<< " is destroyed!\033[0m" << std::endl;
-		return ;
-    }
     std::cout << "ScavTrap " << this->name << " is now in Gate Keeper mode!" << std::endl;
 }
 

@@ -42,7 +42,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &copy)
 
 ClapTrap::~ClapTrap()
 {
-    std::cout << "ClapTrap " << name << " destroyed!" << std::endl;
+    std::cout << "Object " << name << " destroyed!" << std::endl;
 }
 
 void ClapTrap::attack(const std::string& target)
@@ -60,7 +60,13 @@ void ClapTrap::attack(const std::string& target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-    if (amount >= this->hit)
+    if (hit == 0)
+	{
+		std::cout << "ClapTrap " << this->name 
+			<< " is destroyed! " << std::endl;
+		return ;
+	}
+    else if (amount >= this->hit)
     {
         this->hit = 0;
         std::cout << this->name << " takes " << amount << " of damage! " << std::endl;

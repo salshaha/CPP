@@ -1,5 +1,8 @@
 #include "FragTrap.hpp"
 
+unsigned int FragTrap::hit = 100;
+unsigned int FragTrap::damage = 30;
+
 FragTrap::FragTrap() : ClapTrap()
 {
     hit = 100;
@@ -39,4 +42,3 @@ void FragTrap::highFivesGuys(void)
 {
     std::cout << "FragTrap " << name << " requests a positive high five!" << std::endl;
 }
-
