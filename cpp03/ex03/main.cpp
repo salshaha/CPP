@@ -1,6 +1,6 @@
 #include "DiamondTrap.hpp"
 
-int     main( void )
+int     main(void)
 {
     DiamondTrap    robot("salshaha");
     DiamondTrap    robot2 = robot;
