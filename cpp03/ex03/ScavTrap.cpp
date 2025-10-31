@@ -1,10 +1,10 @@
 #include "ScavTrap.hpp"
 
-unsigned int ScavTrap::energy = 50;
+unsigned int ScavTrap::Energy = 50;
 
 ScavTrap::ScavTrap()
 {
-    std::cout << "ScavTrap defult constructed!" << std::endl;
+    std::cout << "ScavTrap default constructed!" << std::endl;
 }
 
 ScavTrap::ScavTrap(std::string name)
@@ -13,7 +13,17 @@ ScavTrap::ScavTrap(std::string name)
     hit = 100;
     energy = 50;
     damage = 20;
-    std::cout << "ScavTrap " << name << " constructed!" << std::endl;
+    std::cout << "ScavTrap " << name << " Parametrized  constructed!" << std::endl;
+}
+
+ScavTrap::ScavTrap(ScavTrap &copy)
+    :ClapTrap(copy)
+{
+    std::cout << "ScavTrap Copy constructor called" << std::endl;
+    this->name = copy.name;
+	this->hit = copy.hit;
+	this->energy = copy.energy;
+	this->damage = copy.damage;
 }
 
 ScavTrap&   ScavTrap::operator=(const ScavTrap& copy)

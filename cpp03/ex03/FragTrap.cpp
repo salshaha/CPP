@@ -1,14 +1,24 @@
 #include "FragTrap.hpp"
 
-unsigned int FragTrap::hit = 100;
-unsigned int FragTrap::damage = 30;
+unsigned int FragTrap::Hit = 100;
+unsigned int FragTrap::Damage = 30;
 
-FragTrap::FragTrap() : ClapTrap()
+FragTrap::FragTrap() 
+    : ClapTrap()
 {
     hit = 100;
     energy = 100;
     damage = 30;
-    std::cout << "FragTrap defult constructed!" << std::endl;
+    std::cout << "FragTrap default constructed!" << std::endl;
+}
+
+FragTrap::FragTrap(FragTrap& copy )
+    :ClapTrap(copy)
+{
+    hit = 100;
+    energy = 100;
+    damage = 30;
+    std::cout << "FragTrap " << name << " copy constructed!" << std::endl;
 }
 
 FragTrap::FragTrap(std::string name)
@@ -17,7 +27,7 @@ FragTrap::FragTrap(std::string name)
     hit = 100;
     energy = 100;
     damage = 30;
-    std::cout << "FragTrap " << name << " constructed!" << std::endl;
+    std::cout << "FragTrap " << name << " Parametrized constructed!" << std::endl;
 }
 
 FragTrap&   FragTrap::operator=(const FragTrap& copy)

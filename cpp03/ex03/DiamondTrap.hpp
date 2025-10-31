@@ -7,19 +7,17 @@
 class DiamondTrap : public FragTrap, public ScavTrap
 {
     private:
-        std::string name; // DiamondTrap’s own name
-
+        std::string name;
     public:
         DiamondTrap();
-        DiamondTrap(const DiamondTrap& copy);
+        DiamondTrap(DiamondTrap& copy);
         DiamondTrap(std::string name);
-        DiamondTrap&   operator=(const DiamondTrap& copy);
+        DiamondTrap&   operator=(DiamondTrap& copy);
         ~DiamondTrap();
 
-        void whoAmI(); // special ability
+        void whoAmI();
 
-        // We use ScavTrap’s version of attack()
-        using ScavTrap::attack;
+        using ScavTrap::attack;//
 };
 
 #endif

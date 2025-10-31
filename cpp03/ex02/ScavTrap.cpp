@@ -14,6 +14,16 @@ ScavTrap::ScavTrap(std::string name)
     std::cout << "ScavTrap " << name << " constructed!" << std::endl;
 }
 
+ScavTrap::ScavTrap(ScavTrap &copy)
+    :ClapTrap(copy)
+{
+    std::cout << "ScavTrap Copy constructor called" << std::endl;
+    this->name = copy.name;
+	this->hit = copy.hit;
+	this->energy = copy.energy;
+	this->damage = copy.damage;
+}
+
 ScavTrap&   ScavTrap::operator=(const ScavTrap& copy)
 {
     std::cout << "ScavTrap Copy assignment operator called" << std::endl;

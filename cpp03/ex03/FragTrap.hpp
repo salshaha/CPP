@@ -7,16 +7,15 @@
 class FragTrap : public virtual ClapTrap
 {
     protected:
-        static unsigned int hit;
-        static unsigned int damage;
+        static unsigned int Hit;
+        static unsigned int Damage;
     public:
         FragTrap();
         FragTrap(std::string name);
-        FragTrap&   operator=( const FragTrap& other );
+        FragTrap(FragTrap& copy);
+        FragTrap&   operator=( const FragTrap& copy );
         ~FragTrap();
         void highFivesGuys(void);
-
 };
-
 
 #endif

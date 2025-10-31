@@ -17,6 +17,15 @@ FragTrap::FragTrap(std::string name)
     std::cout << "FragTrap " << name << " constructed!" << std::endl;
 }
 
+FragTrap::FragTrap(FragTrap& copy )
+    :ClapTrap(copy)
+{
+    hit = 100;
+    energy = 100;
+    damage = 30;
+    std::cout << "FragTrap " << name << "copy constructed!" << std::endl;
+}
+
 FragTrap&   FragTrap::operator=(const FragTrap& copy)
 {
     std::cout << "FragTrap Copy assignment operator called" << std::endl;
