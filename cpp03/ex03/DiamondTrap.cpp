@@ -18,7 +18,7 @@ DiamondTrap::DiamondTrap()
 //     hit = FragTrap::hit;      // from FragTrap
 //     energy = ScavTrap::energy; // from ScavTrap
 //     damage = FragTrap::damage;
-// }
+// } 
 
 DiamondTrap::DiamondTrap(const DiamondTrap& copy)
     : ClapTrap(copy), FragTrap(copy), ScavTrap(copy)
