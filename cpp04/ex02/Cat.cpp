@@ -47,4 +47,3 @@ Brain&	Cat::getBrain( void ) const
 {
 	return (*mind);
 }
-//need get
