@@ -24,8 +24,7 @@ Animal::~Animal()
     std::cout << "Animal default deconstractor called" << std::endl;
 }
 
-void Animal::makeSound () const
-{}
+void Animal::makeSound () const {}
 
 void Animal::setType(std::string &type)
 {

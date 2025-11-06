@@ -25,7 +25,7 @@ Dog::Dog(const Dog& copy)
 Dog& Dog::operator=(const Dog& copy) {
     std::cout << "Cat Assignment operator called" << std::endl;
     if (this != &copy) {
-        Animal::operator=(copy);
+        Animal::operator=(copy);//reread
         delete mind;  // Delete old brain
         mind = new Brain(*copy.mind);  // Deep copy: create new Brain
     }

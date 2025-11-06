@@ -53,3 +53,11 @@ std::string Brain::GetIdea(int index) const
 {
     return this->idea[index];
 }
+void Brain :: printIdeas()
+{
+    for (size_t i = 0; i <= 4; i++)
+    {
+        std :: cout << this->idea[i] << std :: endl;
+    }
+    
+}

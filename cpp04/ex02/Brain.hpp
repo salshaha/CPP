@@ -15,6 +15,7 @@ class Brain
     
         void SetIdea(int index , std::string idea);
         std::string GetIdea(int index) const;
+        void printIdeas();
 };
 
 
